@@ -1,6 +1,6 @@
 {
   "short_name": "PWA Demo App",
-  "name": "dotnetpro PWA Demo Application",
+  "name": "PWA Demo Application",
   "icons": [
     {
       "src": "assets/launcher-icon-3x.png",
