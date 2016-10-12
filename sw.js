@@ -3,13 +3,13 @@ self.addEventListener('install', function (event) {
         caches.open('pwa-demo-v1').then(function (cache) {
             return cache.addAll([
                 '/',
-                '/vendor/bootstrap/css/bootstrap.min.css',
-                '/vendor/bootstrap-material-design/css/bootstrap-material-design.min.css',
-                '/vendor/jquery/jquery.min.js',
-                '/vendor/bootstrap/js/bootstrap.min.js',
-                '/vendor/bootstrap-material-design/js/material.min.js',
+                '/assets/style.css',
+                '/assets/material-icons.woff2',
                 '/scripts/app.js',
-                '/manifest.json'
+                '/assets/favicon.ico',
+                '/assets/karlsruhe-schloss.jpg',
+                '/content/home.html',
+                '/content/info.html'
             ]);
         })
     );

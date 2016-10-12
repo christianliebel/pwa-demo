@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PWA Demo</title>
+    <title>Karlsruhe City Guide</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
     <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-<h1>PWA Demo</h1>
+    <header>
+        <h1>Karlsruhe City Guide</h1>
+    </header>
+    <main>
+        <section id="content">
+        </section>
+    </main>
+    <nav>
+        <a href="#/home"><i class="material-icons">home</i> Home</a>
+        <a href="#/events"><i class="material-icons">event</i> Events</a>
+        <a href="#/info"><i class="material-icons">info_outline</i> Info</a>
+    </nav>
 
-<script src="scripts/app.js" async></script>
+    <script src="vendor/whatwg-fetch/fetch.js" async></script>
+    <script src="scripts/app.js" async></script>
 </body>
 </html>
