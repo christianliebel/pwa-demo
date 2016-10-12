@@ -72,6 +72,7 @@ main {
     padding: 32px;
 
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     background: #ECECEC;
 }
 
