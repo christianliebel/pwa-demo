@@ -7,6 +7,8 @@ This is a demo showing some features of Progressive Web Apps (PWA) and Service W
 * push support (there’s no server component yet)
 * manifest
 * deep-links
+* home screen icon
+* install banner
 
 This demo is far from being feature-complete: As PWA and Service Workers are gradually moving forward, this demo will be updated over time.
 
