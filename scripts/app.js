@@ -1,3 +1,4 @@
+// Progressive Enhancement
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').then(function (registration) {
         // Registration was successful
@@ -24,18 +25,23 @@ function notify(message) {
                 });
             }
         });
+    } else {
+        alert('This platform does not support notifications.');
     }
 }
 
 function navigate(target) {
     var contentArea = document.getElementById('content');
-    fetch(target)
+    contentArea.innerText = 'Loading…';
+
+    fetch('content/' + target.replace(/\.\./g, '') + '.html')
         .then(function (response) {
             if (response.status !== 200) {
                 throw new Error(response.status);
             }
 
             return response.text().then(function (text) {
+                // Potentially hazardous, use sanitizer/real SPA framework.
                 contentArea.innerHTML = text;
             });
         }).catch(function (err) {
@@ -44,7 +50,7 @@ function navigate(target) {
 }
 
 function updateHashLocation() {
-    navigate('content/' + window.location.hash.substr(2) + '.html');
+    navigate(window.location.hash.substr(2));
 }
 
 window.addEventListener("hashchange", updateHashLocation);
