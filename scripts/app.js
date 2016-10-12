@@ -2,6 +2,12 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').then(function (registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
+
+        return registration.pushManager.subscribe({
+            userVisibleOnly: true
+        }).then(function (subscription) {
+            console.log('Push subscription endpoint:', subscription.endpoint);
+        });
     }).catch(function (err) {
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
