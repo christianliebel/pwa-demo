@@ -30,7 +30,7 @@ self.addEventListener('fetch', function (event) {
         })
     );
 });
-
+/*
 self.addEventListener('push', function (event) {
     event.waitUntil(
         self.registration.showNotification('New Notification', {
@@ -39,5 +39,5 @@ self.addEventListener('push', function (event) {
         })
     );
 });
-
+*/
 // self.addEventListener('notificationclick', function () {});

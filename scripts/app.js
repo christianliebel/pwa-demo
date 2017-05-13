@@ -1,4 +1,4 @@
-// Progressive Enhancement
+/*// Progressive Enhancement
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').then(function (registration) {
         // Registration was successful
@@ -13,7 +13,7 @@ if ('serviceWorker' in navigator) {
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
     });
-}
+}*/
 
 function notify(message) {
     if ('Notification' in window) {
